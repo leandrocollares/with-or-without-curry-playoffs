@@ -1,0 +1,67 @@
+@mixin hovered-bar {
+  stroke: $dark-grey;
+  stroke-width: 2px;
+}
+
+.barChart {
+  width: 100%;
+  max-width: 560px;
+  padding: 5px 30px; 
+  position: relative; 
+    
+  &__xAxis {
+    path {
+      stroke: none;
+    }
+    text {
+      display: none;
+    }
+    .tick line {
+      stroke: none;
+    }
+  }  
+  
+  &__yAxis {
+    path {
+      stroke: none;
+    }
+    text {
+      font-size: 13px;
+    }
+    .tick line {
+      stroke: $dark-grey;
+    }
+  }  
+    
+  &__xAxisLabel {
+    fill: $dark-grey;  
+    text-anchor: middle;  
+    font-size: 13px;
+  }
+  
+  &__yAxisLabel {
+    fill: $dark-grey;  
+    text-anchor: start;  
+    font-size: 13px;
+  }
+  
+  &__barLabel {
+    fill: $dark-grey;
+    font-size: 13px;
+    text-anchor: middle;
+  }  
+
+  &__gameWon {
+    fill: $warriors-blue;
+    &:hover {
+      @include hovered-bar;
+    }
+  }
+
+  &__gameLost {
+    fill: $warriors-red;
+    &:hover {
+      @include hovered-bar;
+    }
+  }
+}

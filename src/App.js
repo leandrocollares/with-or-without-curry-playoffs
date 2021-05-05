@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import './sass/main.scss';
+import './poppers.css';
+import Header from './components/Header';
+import BarChart from './components/BarChart';
+import Histogram from './components/Histogram';
+import Footer from './components/Footer';
+import data from './data/data';
 
-function App() {
+const App = () => {
+  const [selectedPointRange, setSelectedPointRange] = useState(null);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Header />
+      <BarChart data={data} selectedPointRange={selectedPointRange} />
+      <Histogram data={data} setSelectedPointRange={setSelectedPointRange} />
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;

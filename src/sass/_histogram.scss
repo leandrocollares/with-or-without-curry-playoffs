@@ -1,0 +1,46 @@
+.histogram {
+  width: 100%;
+  max-width: 400px;
+  padding: 5px 30px; 
+  position: relative; 
+
+  &__rect {
+    fill: $warriors-yellow;
+  }
+
+  &__xAxis {
+    path {
+      stroke: none;
+    }
+    text {
+      font-size: 13px;
+    }
+    .tick line {
+      stroke: none;
+    }
+  }  
+
+  &__yAxis {
+    path {
+      stroke: none;
+    }
+    text {
+      font-size: 13px;
+    }
+    .tick line {
+      stroke: $dark-grey;
+    }
+  }  
+  
+  &__xAxisLabel {
+    fill: $dark-grey;  
+    text-anchor: middle;  
+    font-size: 13px;
+  }
+
+  &__yAxisLabel {
+    fill: $dark-grey;  
+    text-anchor: start;  
+    font-size: 13px;
+  }
+}

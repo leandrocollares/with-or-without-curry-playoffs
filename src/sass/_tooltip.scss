@@ -1,0 +1,32 @@
+.tooltip {
+  font-size: 13px;
+
+  &__seriesInfo {
+    font-weight: 700;
+  }
+
+  &__gameInfo {
+    color: $medium-grey;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  &__grid {
+    display: grid;
+    column-gap: 10px;
+    row-gap: 3px;
+    grid-template-columns: 1fr auto;
+    margin-bottom: 5px;
+
+    &__gameWon {
+      font-weight: 700;
+      color: $warriors-blue;
+    }
+    
+    &__gameLost {
+      font-weight: 700;
+      color: $warriors-red;
+    }
+  }
+}
+  
